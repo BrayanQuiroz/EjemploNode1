@@ -22,7 +22,7 @@ app.use(shopRouters)
 
 app.use((req, res, next) => {
 
-   res.status(404).sendFile(path.join(__dirname, 'views', 'error.html'))
+   res.status(404).render('404')
    // status establece el estado HTTP de la respuesta(404)
 })
 app.listen(3000)

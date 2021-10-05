@@ -9,7 +9,7 @@ const product = []
 Router.get('/add-product' ,( req, res, next) => {
 
    console.log('In the middleware!!!')
-   res.sendFile(path.join(rootDir, 'views', '/add-product.html'))
+   res.render('add-product',{pageTitle: 'Add Product'})
 }) //Middleware recibe tres parameteos
 
 Router.post('/add-product', (req, res, next) => {
